@@ -5,11 +5,6 @@ It's a web application for managing hospitals rooms and determining the patient'
 
 It allows nurses to keep track of the patients and their diseases in real time and to have an overview over the patients and rooms, and better manage the rooms assignment across patients.
 
-# Live demo :rocket:
-https://nhs-app.herokuapp.com/
-* username: admin
-* password: admin
-
 # Youtube video
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Q9wTakyRWi4
 " target="_blank"><img src="http://img.youtube.com/vi/Q9wTakyRWi4/0.jpg" 
@@ -21,7 +16,7 @@ alt="Youtube video" width="240" height="180" border="10" /></a>
 # Installing - easy :electric_plug:
 1.	Download the repository
 ```
-git clone https://github.com/margiki/NHS-nodejs-webapp
+git clone https://github.com/together-leap/HMS
 ```
 2.	Open the Terminal (Linux & MacOS) or PowerShell (Windows) and change directory to the project folder.
 3.	Type ‘npm install’ in the Terminal (PowerShell) and press Enter. All the dependencies would be installed.
@@ -106,7 +101,7 @@ Folder | Content | Responsability
 **The available application is connected to a MongoDB database online.** If you want to change the database to another one, you need to go: NHS app folder -> server -> db -> mongoose.js
 
 Inside the file, you need to change the database link from
-mongoose.connect("mongodb://admin:admin123@ds145220.mlab.com:45220/nhs-app"); to mongoose.connect("your-database-link");
+mongoose.connect("mongodb://<username>:<password>@<hostname>:<port-no>/nhs-app"); to mongoose.connect("your-database-link");
 
 # REST Apis
 The backend and frontend communicate through REST Apis. On the frontend, we make Ajax requests using jQuery to the following routes: 
