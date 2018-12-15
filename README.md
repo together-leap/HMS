@@ -16,7 +16,7 @@ alt="Youtube video" width="240" height="180" border="10" /></a>
 # Installing - easy :electric_plug:
 1.	Download the repository
 ```
-git clone https://github.com/margiki/NHS-nodejs-webapp
+git clone https://github.com/together-leap/HMS
 ```
 2.	Open the Terminal (Linux & MacOS) or PowerShell (Windows) and change directory to the project folder.
 3.	Type ‘npm install’ in the Terminal (PowerShell) and press Enter. All the dependencies would be installed.
