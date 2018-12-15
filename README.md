@@ -101,7 +101,7 @@ Folder | Content | Responsability
 **The available application is connected to a MongoDB database online.** If you want to change the database to another one, you need to go: NHS app folder -> server -> db -> mongoose.js
 
 Inside the file, you need to change the database link from
-mongoose.connect("mongodb://admin:admin123@ds145220.mlab.com:45220/nhs-app"); to mongoose.connect("your-database-link");
+mongoose.connect("mongodb://<username>:<password>@<hostname>:<port-no>/nhs-app"); to mongoose.connect("your-database-link");
 
 # REST Apis
 The backend and frontend communicate through REST Apis. On the frontend, we make Ajax requests using jQuery to the following routes: 
