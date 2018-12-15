@@ -4,6 +4,6 @@ var mongoose = require ('mongoose');
 mongoose.Promise = global.Promise;
 
 //change the database with yours
-mongoose.connect("mongodb://<username>:<password>@<hostname>:<port-no>/nhs-app");
+mongoose.connect("mongodb://admin:admin123@ds145562.mlab.com:45562/nhs-app");
 
 module.exports = {mongoose};
