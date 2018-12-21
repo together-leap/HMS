@@ -34,8 +34,8 @@ $(document).ready(function() {
 
                  // check if he need to be updated
                  // @@@@@@@@@@@@@@@@@@@@@@@@@@ -> need to change the time for the interval to be updated
-                 if (timeDifferenceInMinutes > 1440) {
-                    patientsRowConstructor.push("<span class=\"glyphicon glyphicon-warning-sign\" style=\"color: red;\"></span>   " + patient["firstName"] + " " + patient["lastName"]);
+                 if (timeDifferenceInMinutes > 2880) {
+                    patientsRowConstructor.push("<span class=\"glyphicon glyphicon glyphicon-exclamation-sign\" style=\"color: red;\"></span>   " + patient["firstName"] + " " + patient["lastName"]);
                  } else {
                     patientsRowConstructor.push(patient["firstName"] + " " + patient["lastName"]);
                  }
@@ -71,7 +71,7 @@ $(document).ready(function() {
 		       resposnive: true,
 		       info: false,
                  language: {
-                   searchPlaceholder: "Search patient waiting...",
+                   searchPlaceholder: "Search patient wating...",
                    sSearch: ""
                  },
                aaSorting: [[2, 'desc']],
@@ -106,8 +106,8 @@ $(document).ready(function() {
 	           	 title: "Score",
                      width: "15%"
 	            }],
-		        scrollY: '60vh',
-		        scrollCollapse: true,
+		        //scrollY: '60vh',
+		        //scrollCollapse: true,
 		        paging: false,
 		        resposnive: true,
 		        info: false,
@@ -115,7 +115,7 @@ $(document).ready(function() {
                        searchPlaceholder: "Search patient in room...",
                        sSearch: ""
                 },
-                aaSorting: [[3, 'desc']],
+                aaSorting: [[3, 'asc']],
                 fnCreatedRow: function(nRow, aData, iDisplayIndex) {
                      // nRow - this is the HTML element of the row
                      // aData - array of the data in the columns. Get column 4 data: aData[3]
@@ -153,7 +153,7 @@ $(document).ready(function() {
             var patientsWithRoomsDashboard = patientsInHospitalTableConstructor.length || 0;
             $("#patients-with-rooms-live").html(patientsWithRoomsDashboard);
 
-            var patientsWaitingDashboard = patientsWaitingTableConstructor.length || 0;
+            var patientsWaitingDashboard = patientsWaitingTableConstructor.length - 1 || 0;
             $("#patients-waiting-live").html(patientsWaitingDashboard);
 
             var freeRoomsDashboard = freeRoomsTableConstructor.length || 0;
@@ -259,4 +259,3 @@ $("body").on('dblclick', '#patients-waiting > tbody > tr', function() {
      NHSnumber = NHSnumber.textContent;
      window.location.href = URL + "/app/patient/" + NHSnumber;
 });
-

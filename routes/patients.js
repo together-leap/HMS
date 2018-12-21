@@ -51,7 +51,8 @@ router.post('/app/addpatient', (req, res) => {
         res.status(400).redirect('/app/addpatient');
     } else {
         // set the sex of the new patient
-        var sex = req.body.sex;
+        //var sex = req.body.sex;
+        var sex = "male";
         if (sex === "male") {
             sex = true;
         } else {

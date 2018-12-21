@@ -6,11 +6,11 @@ $(document).ready(function() {
     var patientAPI = URL + "/app/getpatient/" + hospitalNumber[3];
 
     $("#form-patient").attr("action", "/app/updatepatient/" + hospitalNumber[3]);
-    $("#delete-button").attr("href", "/app/deletepatient/" + hospitalNumber[3]);
+    $("#delete-button").attr("href", "/app/deletpatient/" + hospitalNumber[3]);
 
     $.getJSON(patientAPI).done(function(patient) {
-       $("#first-name-disabled").attr("placeholder", patient["firstName"]);
-       $("#last-name-disabled").attr("placeholder", patient["lastName"]);
+       $("#first-name-disabled").attr("placeholder", patient["lastName"]);
+       $("#last-name-disabled").attr("placeholder", patient["firstName"]);
        $("#hospitalNumber-disabled").attr("placeholder", patient["hospitalNumber"]);
        $("#date-of-birth-disabled").attr("placeholder", patient["dateOfBirth"]);
        $("#patient-score").html(patient["score"]);
@@ -22,7 +22,7 @@ $(document).ready(function() {
        if (patient["sex"] === true) {
            $("#patient-sex-disabled").attr("placeholder", "Male");
        } else if (patient["sex"] === false) {
-           $("#patient-sex-disabled").attr("placeholder", "Female");
+           $("#patient-sex-disabled").attr("placeholder", "Male");
        }
 
 /*
@@ -92,7 +92,7 @@ $(document).ready(function() {
 		      paging: false,
                 info: false,
                 language: {
-                sSearch: "Search disease"
+                sSearch: "Search disese"
               }
 		   });
        });
