@@ -32,7 +32,7 @@ $(document).ready(function() {
 		      paging: false,
                 info: false,
                 language: {
-                  searchPlaceholder: "Search disese...",
+                  searchPlaceholder: "Search disease...",
                   sSearch: ""
                 },
 		 });
@@ -71,9 +71,10 @@ $(document).ready(function() {
 		      paging: false,
                 info: false,
                 language: {
-                  searchPlaceholder: "Search disese...",
+                  searchPlaceholder: "Search room...",
                   sSearch: ""
                 },
 		 });
     });
 });
+

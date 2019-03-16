@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
 router.post('/login',
     passport.authenticate('local', {
         successRedirect: '/app',
-        failureRedirect: '/failure',
+        failureRedirect: '/',
         failureFlash: true
     }), function(req, res) {
         // If this function gets called, authentication was successful.
